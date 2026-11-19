@@ -28,6 +28,8 @@ Ready-to-order Gerber files are in [`gerber/`](gerber/). By [ElectroIoT.in](http
 | [Wemos D1 mini Proto](#wemos-d1-mini-proto-board-50--45-mm) | 50 × 45 mm | D1 mini socket, extra linked holes, grid | [zip](gerber/Gerber_D1-mini-Proto-50x45.zip) |
 | [ESP32-C3 SuperMini Proto](#esp32-c3-supermini-proto-board-50--40-mm) | 50 × 40 mm | C3 SuperMini socket, 2 extra holes per pin, grid | [zip](gerber/Gerber_C3-SuperMini-Proto-50x40.zip) |
 | [STM32 Blue Pill Proto](#stm32-blue-pill-proto-board-100--50-mm) | 100 × 50 mm | Blue Pill socket, 2 extra holes per pin, grid | [zip](gerber/Gerber_BluePill-Proto-100x50.zip) |
+| [PCB Ruler 10 cm](#pcb-rulers-10-cm-and-15-cm) | 110 × 25 mm | mm + inch scales both sides, drill gauge, 11 SMD footprints | [zip](gerber/Gerber_PCB-Ruler-10cm.zip) |
+| [PCB Ruler 15 cm](#pcb-rulers-10-cm-and-15-cm) | 160 × 32 mm | mm + inch scales both sides, drill + AWG gauges, pin pitches, trace widths, 21 SMD footprints | [zip](gerber/Gerber_PCB-Ruler-15cm.zip) |
 
 The images below show the top and bottom silkscreen drawn over each other. On the real board they're on opposite sides. Blue lines are bottom-layer copper and red is top-layer copper.
 
@@ -194,6 +196,29 @@ Socket rows for an ESP32-C3 SuperMini (2 × 8 pins, 0.6" apart). Each pin has 2 
 Socket rows for an STM32F103 Blue Pill (2 × 20 pins, 0.6" apart), with the USB end on the left and the SWD header end on the right. Each pin has 2 extra linked holes and is labelled. VB is the square pad. A Black Pill fits the same rows, but its pin names are different.
 
 > **For all carrier boards:** check that the printed labels match your module's own silkscreen before soldering. Clone boards sometimes change the pin order. The GND and power pins aren't joined to each other, so wire the ones you use.
+
+### PCB Rulers (10 cm and 15 cm)
+
+![PCB Ruler 15 cm](images/PCB-Ruler-15cm.png)
+
+![PCB Ruler 10 cm](images/PCB-Ruler-10cm.png)
+
+A ruler and a reference card in one board. The scale marks and footprints are bare copper with no solder mask, so with an **ENIG (gold)** finish they come out shiny gold.
+
+| Feature | 10 cm | 15 cm |
+|---|---|---|
+| Size | 110 × 25 mm | 160 × 32 mm |
+| mm scale (1 mm marks, 5 / 10 mm long marks) | both sides | both sides |
+| inch scale (0.1" marks) | both sides | both sides |
+| Drill gauge (finished plated holes) | 0.5 – 3.0 mm, 6 sizes | 0.4 – 3.2 mm, 11 sizes |
+| Wire gauge holes (unplated, wire Ø + 0.1 mm) | — | AWG 30 – 12 |
+| Pin pitch samples | — | 1.27, 2.0, 2.54, 3.81, 5.08 mm |
+| Trace widths with current rating (1 oz copper, +10 °C, IPC-2221) | — | 0.1 – 2.0 mm |
+| SMD footprints | 0402, 0603, 0805, 1206, SOD-123, SOT-23, SOT-23-6, SOT-223, SOIC-8, TSSOP-16, QFN-16 | 0201 – 2512, SOD-323, SOD-123, SMA, SMB, SOT-23, SOT-23-6, SOT-89, SOT-223, TO-252, SOIC-8, TSSOP-16, QFN-16, QFN-32, LQFP-48 |
+| Back side | Ohm's law, LED resistor, divider, colour code | Same, plus RC, parallel resistors, E12 values and logic levels |
+| Hanging hole | 3 mm | 3 mm |
+
+The scales are on both sides, and each side reads left to right when that side is facing up. Order with **ENIG**, any mask colour (black or blue make the gold stand out), 1.6 mm FR-4. At 110 mm and 160 mm long, the rulers cost a little more than boards under 100 × 100 mm.
 
 ## Ordering
 
