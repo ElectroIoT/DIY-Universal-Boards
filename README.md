@@ -2,7 +2,7 @@
 
 Open-source prototype PCBs for hobby electronics: dot-grid boards, stripboard, breadboard-layout boards, carriers for popular dev boards (Pico, ESP32, ESP8266, Nano, D1 mini, C3 SuperMini, Blue Pill), Arduino Uno and Mega proto shields, a Raspberry Pi HAT proto board and an SMD adapter. All boards use a 2.54 mm (0.1") grid, so DIP chips, pin headers and breadboard parts fit directly.
 
-Ready-to-order Gerber files are in [`gerber/`](gerber/). By [ElectroIoT.in](https://electroiot.in).
+Ready-to-order Gerber files are in [`gerber/`](gerber/). Project story, per-board write-ups and a blog post are in [`docs/`](docs/). By [ElectroIoT.in](https://electroiot.in).
 
 ## Boards
 
