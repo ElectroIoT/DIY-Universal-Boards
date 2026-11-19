@@ -1,6 +1,6 @@
 # DIY Universal Boards
 
-Open-source prototype PCBs for hobby electronics: dot-grid boards, stripboard, breadboard-layout boards, module carriers (Raspberry Pi Pico, ESP32 DevKit), an SMD adapter and an Arduino Uno proto shield. All boards use a 2.54 mm (0.1") grid, so DIP chips, pin headers and breadboard parts fit directly.
+Open-source prototype PCBs for hobby electronics: dot-grid boards, stripboard, breadboard-layout boards, carriers for popular dev boards (Pico, ESP32, ESP8266, Nano, D1 mini, C3 SuperMini, Blue Pill), Arduino Uno and Mega proto shields, a Raspberry Pi HAT proto board and an SMD adapter. All boards use a 2.54 mm (0.1") grid, so DIP chips, pin headers and breadboard parts fit directly.
 
 Ready-to-order Gerber files are in [`gerber/`](gerber/). By [ElectroIoT.in](https://electroiot.in).
 
@@ -21,6 +21,13 @@ Ready-to-order Gerber files are in [`gerber/`](gerber/). By [ElectroIoT.in](http
 | [ESP32 DevKit Proto Board](#esp32-devkit-38-pin-proto-board-100--50-mm) | 100 × 50 mm | 38-pin ESP32 DevKit (0.9" and 1.0" wide), grid | [zip](gerber/Gerber_ESP32-DevKit-Proto-100x50.zip) |
 | [SMD Adapter Board](#smd-adapter-board-100--50-mm) | 100 × 50 mm | SOIC-16, 2× SOIC-8, 4× SOT-23, 3× 0805, 3× 1206, grid | [zip](gerber/Gerber_SMD-Adapter-100x50.zip) |
 | [Uno Proto Shield](#arduino-uno-proto-shield) | 68.6 × 53.3 mm | Arduino Uno R3 shield shape, headers, grid | [zip](gerber/Gerber_Uno-Proto-Shield.zip) |
+| [Mega Proto Shield](#arduino-mega-proto-shield) | 101.6 × 53.3 mm | Arduino Mega 2560 R3 shield shape, all headers, grid | [zip](gerber/Gerber_Mega-Proto-Shield.zip) |
+| [Raspberry Pi HAT Proto](#raspberry-pi-hat-proto-board) | 65 × 56.5 mm | HAT size, 40-pin header, 1 linked hole per pin, grid | [zip](gerber/Gerber_RPi-HAT-Proto.zip) |
+| [Arduino Nano Proto](#arduino-nano-proto-board-70--50-mm) | 70 × 50 mm | Nano socket, 2 extra holes per pin, grid | [zip](gerber/Gerber_Nano-Proto-70x50.zip) |
+| [NodeMCU ESP8266 Proto](#nodemcu-esp8266-proto-board-100--50-mm) | 100 × 50 mm | NodeMCU v2 (0.9") and v3 (1.1") rows, grid | [zip](gerber/Gerber_NodeMCU-Proto-100x50.zip) |
+| [Wemos D1 mini Proto](#wemos-d1-mini-proto-board-50--45-mm) | 50 × 45 mm | D1 mini socket, extra linked holes, grid | [zip](gerber/Gerber_D1-mini-Proto-50x45.zip) |
+| [ESP32-C3 SuperMini Proto](#esp32-c3-supermini-proto-board-50--40-mm) | 50 × 40 mm | C3 SuperMini socket, 2 extra holes per pin, grid | [zip](gerber/Gerber_C3-SuperMini-Proto-50x40.zip) |
+| [STM32 Blue Pill Proto](#stm32-blue-pill-proto-board-100--50-mm) | 100 × 50 mm | Blue Pill socket, 2 extra holes per pin, grid | [zip](gerber/Gerber_BluePill-Proto-100x50.zip) |
 
 The images below show the top and bottom silkscreen drawn over each other. On the real board they're on opposite sides. Blue lines are bottom-layer copper and red is top-layer copper.
 
@@ -136,6 +143,57 @@ Pin-1 holes are square. The rest of the board is a dot grid.
 - Each header pin has 1 extra linked hole, and pin names are printed next to the headers.
 - There's no copper over the Uno's USB-B connector, so it can't short against the shield.
 - The ICSP header isn't included.
+
+### Arduino Mega Proto Shield
+
+![Mega Proto Shield](images/Mega-Proto-Shield.png)
+
+- Mega 2560 R3 board outline, with the six Mega mounting holes (3.2 mm, unplated).
+- All headers: power, A0–A15, D0–D21 (including the 160 mil D7/D8 gap) and the 2 × 18 double row (5V, D22–D53, GND).
+- Each pin on the long top and bottom headers has 1 extra linked hole. The double row is labelled in pairs (22/23 …).
+- There's no copper over the USB-B connector. At 101.6 mm it's just over 100 mm, so some fabs charge a little more.
+
+### Raspberry Pi HAT Proto Board
+
+![Raspberry Pi HAT Proto](images/RPi-HAT-Proto.png)
+
+- Official HAT size: 65 × 56.5 mm with 3 mm corners, and four 2.75 mm (M2.5) mounting holes 58 × 49 mm apart.
+- 40-pin header in the standard HAT position. Pin 1 (3V3) is the square pad.
+- Every header pin has 1 linked hole: odd pins in the row just below the header, even pins in the row below the "odd" labels. Labels use BCM numbers (G17 = GPIO17).
+- This is a HAT-*size* proto board. It doesn't include the ID EEPROM that an official HAT needs.
+
+### Arduino Nano Proto Board (70 × 50 mm)
+
+![Nano Proto Board](images/Nano-Proto-70x50.png)
+
+Socket rows for an Arduino Nano (2 × 15 pins, 0.6" apart) with the USB end on the left. Each pin has 2 extra linked holes and is labelled. TX1 (pin 1) is the square pad.
+
+### NodeMCU ESP8266 Proto Board (100 × 50 mm)
+
+![NodeMCU Proto Board](images/NodeMCU-Proto-100x50.png)
+
+- The bottom header is fixed. The top header has linked rows for **NodeMCU v2 (0.9" wide)** and **v3 / LoLin (1.1" wide)**, so either board fits.
+- Pins are labelled (A0, D0–D8, RX, TX, SD0–SD3, …). A0 is the square pad.
+
+### Wemos D1 mini Proto Board (50 × 45 mm)
+
+![D1 mini Proto Board](images/D1-mini-Proto-50x45.png)
+
+Socket rows for a Wemos / LOLIN D1 mini (2 × 8 pins, 0.9" apart), with extra linked holes and pin labels. TX is the square pad.
+
+### ESP32-C3 SuperMini Proto Board (50 × 40 mm)
+
+![C3 SuperMini Proto Board](images/C3-SuperMini-Proto-50x40.png)
+
+Socket rows for an ESP32-C3 SuperMini (2 × 8 pins, 0.6" apart). Each pin has 2 extra linked holes and is labelled (IO0–IO10, IO20, IO21, 5V, 3V3, GND). 5V is the square pad. Other SuperMini boards (C6, H2, S3) have the same row spacing, but their pin names are different.
+
+### STM32 Blue Pill Proto Board (100 × 50 mm)
+
+![Blue Pill Proto Board](images/BluePill-Proto-100x50.png)
+
+Socket rows for an STM32F103 Blue Pill (2 × 20 pins, 0.6" apart), with the USB end on the left and the SWD header end on the right. Each pin has 2 extra linked holes and is labelled. VB is the square pad. A Black Pill fits the same rows, but its pin names are different.
+
+> **For all carrier boards:** check that the printed labels match your module's own silkscreen before soldering. Clone boards sometimes change the pin order. The GND and power pins aren't joined to each other, so wire the ones you use.
 
 ## Ordering
 
