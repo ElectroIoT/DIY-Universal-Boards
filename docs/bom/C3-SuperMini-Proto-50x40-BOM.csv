@@ -1,0 +1,5 @@
+Item,Designator,Qty,Description,Value / Part,Package,Type,Note
+1,J1,1,Female pin header 1x8 (socket for module top row),2.54 mm 1x8 female header,THT 2.54 mm,THT,Row: 5V GND 3V3 IO4 IO3 IO2 IO1 IO0
+2,J2,1,Female pin header 1x8 (socket for module bottom row),2.54 mm 1x8 female header,THT 2.54 mm,THT,Row: IO5 IO6 IO7 IO8 IO9 IO10 IO20 IO21
+3,U1,1,ESP32-C3 SuperMini module (plugs into J1/J2),ESP32-C3 SuperMini,Module 22.5 x 18 mm,Module,Not soldered to the PCB; plugs into the headers
+4,H1-H4,4,M3 standoff + screw (optional),M3 x 10 mm nylon or brass standoff,-,Hardware,Optional mounting
