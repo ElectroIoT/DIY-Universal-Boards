@@ -30,7 +30,8 @@ Ready-to-order Gerber files are in [`gerber/`](gerber/). Project story, per-boar
 | [STM32 Blue Pill Proto](#stm32-blue-pill-proto-board-100--50-mm) | 100 × 50 mm | Blue Pill socket, 2 extra holes per pin, grid | [zip](gerber/Gerber_BluePill-Proto-100x50.zip) |
 | [PCB Ruler 10 cm](#pcb-rulers-10-cm-and-15-cm) | 110 × 25 mm | mm + inch scales both sides, drill gauge, 11 SMD footprints | [zip](gerber/Gerber_PCB-Ruler-10cm.zip) |
 | [PCB Ruler 15 cm](#pcb-rulers-10-cm-and-15-cm) | 160 × 32 mm | mm + inch scales both sides, drill + AWG gauges, pin pitches, trace widths, 21 SMD footprints | [zip](gerber/Gerber_PCB-Ruler-15cm.zip) |
-| [LED Chaser Ruler 10 cm](#led-chaser-pcb-ruler-10-cm) | 120 × 32 mm | Ruler with a 555 + 4017 LED chaser, one LED per cm, CR2032 on the back | [zip](gerber/Gerber_LED-Chaser-Ruler-10cm.zip) |
+| [LED Chaser Ruler 10 cm](#led-chaser-pcb-rulers-10-cm-and-15-cm) | 120 × 34 mm | Ruler with a 555 + 4017 rainbow LED chaser, LED at every cm, all parts on top | [zip](gerber/Gerber_LED-Chaser-Ruler-10cm.zip) |
+| [LED Chaser Ruler 15 cm](#led-chaser-pcb-rulers-10-cm-and-15-cm) | 170 × 34 mm | Same circuit, LED every 1.5 cm, all parts on top | [zip](gerber/Gerber_LED-Chaser-Ruler-15cm.zip) |
 
 The images below show the top and bottom silkscreen drawn over each other. On the real board they're on opposite sides. Blue lines are bottom-layer copper and red is top-layer copper.
 
@@ -221,13 +222,22 @@ A ruler and a reference card in one board. The scale marks and footprints are ba
 
 The scales are on both sides, and each side reads left to right when that side is facing up. Order with **ENIG**, any mask colour (black or blue make the gold stand out), 1.6 mm FR-4. At 110 mm and 160 mm long, the rulers cost a little more than boards under 100 × 100 mm.
 
-### LED Chaser PCB Ruler (10 cm)
+### LED Chaser PCB Rulers (10 cm and 15 cm)
 
-![LED Chaser Ruler](images/LED-Chaser-Ruler-10cm.png)
+![LED Chaser Ruler 10 cm](images/LED-Chaser-Ruler-10cm.png)
 
-A working circuit on a ruler. A TLC555 clock drives a 74HC4017 counter, and a light runs along the centimetre marks, one LED per cm. It runs from a CR2032 on the back, with an ON/OFF slide switch and a speed trimmer (about 1.4–12 Hz). It also makes a good SMD soldering practice kit: SOIC-8, SOIC-16 and 0805 parts. It has mm and inch scales on both sides and a small drill gauge.
+![LED Chaser Ruler 15 cm](images/LED-Chaser-Ruler-15cm.png)
 
-The full circuit description, netlist, parts list and assembly steps are in [docs/led-chaser-ruler.md](docs/led-chaser-ruler.md). The design passes EasyEDA's design rule check with 0 errors, but it **hasn't been built and tested yet**.
+A working circuit on a ruler. A TLC555 clock drives a 74HC4017 counter, and a **rainbow light runs along the scale**: one LED at every cm on the 10 cm ruler, and one every 1.5 cm on the 15 cm ruler. It runs from a CR2032 coin cell, with an ON/OFF slide switch and a speed trimmer (about 1.4–12 steps per second).
+
+- **All parts are on the top side**, so the back is flat and the ruler still lies flat for measuring.
+- mm and inch scales on both sides, a drill gauge, and a gold exposed-copper "ElectroIoT.in" logo.
+- It makes a good SMD soldering practice kit: SOIC-8, SOIC-16 and 0805 parts.
+- For the best look, order matte black mask, white silkscreen and ENIG.
+
+![Schematic](docs/led-chaser-ruler-schematic.png)
+
+The full schematic, netlist, parts list (with LED colours) and assembly steps are in [docs/led-chaser-ruler.md](docs/led-chaser-ruler.md). Both boards pass EasyEDA's design rule check with 0 errors, but they **haven't been built and tested yet**.
 
 ## Ordering
 
