@@ -25,7 +25,7 @@ Vector version: [led-chaser-ruler-schematic.svg](led-chaser-ruler-schematic.svg)
 | Extras | drill gauge 0.5–2.0 mm, gold "ElectroIoT.in" logo, formulas and colour code on the back, hanging hole | same, with a bigger logo |
 | Gerber | [`Gerber_LED-Chaser-Ruler-10cm.zip`](../gerber/Gerber_LED-Chaser-Ruler-10cm.zip) | [`Gerber_LED-Chaser-Ruler-15cm.zip`](../gerber/Gerber_LED-Chaser-Ruler-15cm.zip) |
 
-Both boards pass EasyEDA's design rule check with **0 errors**, including connectivity. **They haven't been built and tested yet.**
+Both boards pass EasyEDA's design rule check with **0 errors**, including connectivity. **They haven't been built and tested yet.** Both use real library footprints with LCSC part numbers, so they're ready for assembly.
 
 ## Make it colourful
 
@@ -39,7 +39,7 @@ PCB colour comes from the order options, and the LEDs add the rest:
 | Bright | Red or green | White | ENIG |
 
 - With **ENIG**, the scale marks, footprint pads and the "ElectroIoT.in" logo come out shiny gold. The logo is exposed copper with no mask on it.
-- **Rainbow LEDs:** fit the LEDs as a colour gradient (red → orange → amber → yellow → yellow-green). All of these light well from a 3 V coin cell.
+- **Rainbow LEDs:** fit the LEDs as a colour gradient (red → orange → yellow → yellow-green). All of these light well from a 3 V coin cell.
 - Blue, white and pure green LEDs need about 3 V or more, so they will be dim or won't light from a CR2032. Use them only if you power the board from 5 V.
 
 ## How it works
@@ -64,27 +64,47 @@ PCB colour comes from the order options, and the LEDs add the rest:
 | Q0…Q9 | U2 pins 3, 2, 4, 7, 10, 1, 5, 6, 9, 11 → D1…D10 anodes |
 | LEDK | D1…D10 cathodes, R3 |
 
-## Parts list (BOM)
+## Parts list (BOM) with LCSC part numbers
 
-| Ref | Qty | Value | Package | Example part |
-|---|---|---|---|---|
-| U1 | 1 | TLC555 (CMOS 555) | SOIC-8 | TLC555CDR / LMC555 / ICM7555 |
-| U2 | 1 | 74HC4017 (or CD4017) | SOIC-16 | 74HC4017D |
-| D1, D2 | 2 | LED red | 0805 | |
-| D3, D4 | 2 | LED orange | 0805 | |
-| D5, D6 | 2 | LED amber | 0805 | |
-| D7, D8 | 2 | LED yellow | 0805 | |
-| D9, D10 | 2 | LED yellow-green (570 nm) | 0805 | |
-| R1 | 1 | 4.7 kΩ | 0805 | |
-| R2 | 1 | 10 kΩ | 0805 | |
-| R3 | 1 | 220 Ω | 0805 | |
-| C1 | 1 | 4.7 µF, 10 V | 0805 | X5R / X7R |
-| C2 | 1 | 10 nF | 0805 | |
-| C3, C4 | 2 | 100 nF | 0805 | |
-| RV1 | 1 | 100 kΩ trimmer | 3 mm SMD | Bourns 3314J-1-104E |
-| SW1 | 1 | Slide switch SPDT | SMD | C&K PCM12SMTR |
-| BT1 | 1 | CR2032 holder, top side | SMD | Keystone 3034 |
-| — | 1 | CR2032 cell | | |
+Every part comes from the LCSC library, so the board is ready for **PCB assembly (PCBA)**. Stock was checked on 2026-11-20.
+
+| Ref | Qty | Part | Manufacturer | Manufacturer part | LCSC # |
+|---|---|---|---|---|---|
+| U1 | 1 | CMOS 555 timer, SOIC-8 | TI | TLC555CDR | C6986 |
+| U2 | 1 | Decade counter, SOIC-16 | Nexperia | 74HC4017D,653 | C148206 |
+| D1, D2 | 2 | LED red, 0805 | KENTO | KT-0805R | C2295 |
+| D3, D4 | 2 | LED orange, 0805 | NATIONSTAR | NCD0805O1 | C84262 |
+| D5, D6 | 2 | LED orange, 0805 | KENTO | KT-0805O | C110371 |
+| D7, D8 | 2 | LED yellow, 0805 | KENTO | KT-0805Y | C2296 |
+| D9, D10 | 2 | LED yellow-green, 0805 | EVERLIGHT | 17-21SYGC/S530-E1/4T | C2986045 |
+| R1 | 1 | 4.7 kΩ 1 %, 0805 | UNI-ROYAL | 0805W8F4701T5E | C17673 |
+| R2 | 1 | 10 kΩ 1 %, 0805 | UNI-ROYAL | 0805W8F1002T5E | C17414 |
+| R3 | 1 | 220 Ω 1 %, 0805 | UNI-ROYAL | 0805W8F2200T5E | C17557 |
+| C1 | 1 | 4.7 µF 25 V X5R, 0805 | SAMSUNG | CL21A475KAQNNNE | C1779 |
+| C2 | 1 | 10 nF 50 V X7R, 0805 | YAGEO | CC0805KRX7R9BB103 | C83170 |
+| C3, C4 | 2 | 100 nF 50 V X7R, 0805 | SAMSUNG | CL21B104KBCNNNC | C1711 |
+| RV1 | 1 | 100 kΩ trimmer, 4 mm SMD | BOURNS | 3314J-1-104E | C51284 |
+| SW1 | 1 | Slide switch SPDT, SMD | C&K | PCM12SMTR | C221841 |
+| BT1 | 1 | CR2032 holder, SMD (top side) | TE Connectivity | BAT-HLD-001 | C7501066 |
+| — | 1 | CR2032 cell (not on the PCB) | | | |
+
+### Assembly files (in [`../assembly/`](../assembly/))
+
+| File | Use it for |
+|---|---|
+| `BOM_LED-Chaser-Ruler-10cm_LCSC.csv` / `-15cm_LCSC.csv` | LCSC-based assembly or ordering parts from LCSC. Has the `Comment, Designator, Footprint, LCSC Part #` columns plus manufacturer part numbers and stock. |
+| `BOM_LED-Chaser-Ruler-10cm_PCBWay.csv` / `-15cm_PCBWay.csv` | PCBWay assembly: manufacturer part numbers only, no supplier numbers. |
+| `PickAndPlace_LED-Chaser-Ruler-10cm.csv` / `-15cm.csv` | Pick-and-place (CPL) file: designator, X, Y (mm), layer and rotation for all 22 parts. |
+
+All parts are on the **top side**, and every part is SMD.
+
+### Schematic in EasyEDA
+
+The EasyEDA projects (**"LED Chaser PCB Ruler 10 cm V2"** and **"... 15 cm V2"**) have the full schematic on page **P1**, using real library parts. The PCB was updated from that schematic, so the BOM and pick-and-place files come straight from the design.
+
+| 10 cm | 15 cm |
+|---|---|
+| ![Schematic 10 cm](Schematic_LED-Chaser-Ruler-10cm.png) | ![Schematic 15 cm](Schematic_LED-Chaser-Ruler-15cm.png) |
 
 ## Assembly
 
@@ -92,5 +112,5 @@ PCB colour comes from the order options, and the LEDs add the rest:
 2. Then the 0805 resistors and capacitors.
 3. Then the **LEDs, cathode toward the top edge** (under the short printed bar), in rainbow order from D1 to D10.
 4. Then RV1 and SW1.
-5. Last, the **battery holder** (BT1) on top. The round gold pad under it is the battery's minus contact, so keep it clean and don't put solder on it. Fit the CR2032 **+ side up**.
+5. Last, the **battery holder** (BT1, BAT-HLD-001) on top. The round gold pad under it is the battery's minus contact, so keep it clean and don't put solder on it. Fit the CR2032 **+ side up**.
 6. Switch ON and turn RV1 to set the speed.

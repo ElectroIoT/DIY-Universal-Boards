@@ -237,7 +237,7 @@ A working circuit on a ruler. A TLC555 clock drives a 74HC4017 counter, and a **
 
 ![Schematic](docs/led-chaser-ruler-schematic.png)
 
-The full schematic, netlist, parts list (with LED colours) and assembly steps are in [docs/led-chaser-ruler.md](docs/led-chaser-ruler.md). Both boards pass EasyEDA's design rule check with 0 errors, but they **haven't been built and tested yet**.
+The full schematic, netlist, parts list with **LCSC part numbers**, and assembly steps are in [docs/led-chaser-ruler.md](docs/led-chaser-ruler.md). Ready-made **BOM and pick-and-place files for PCB assembly** are in [`assembly/`](assembly/). Both boards pass EasyEDA's design rule check with 0 errors, but they **haven't been built and tested yet**.
 
 ## Ordering
 
