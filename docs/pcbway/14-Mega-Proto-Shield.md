@@ -12,7 +12,7 @@ arduino mega, mega 2560, shield
 ## Description (paste into the project description)
 
 ### Why I made this
-In 2019 I shared a simple 100 x 50 mm DIY universal board. I kept using it, and I kept wishing it came in more sizes and in versions made for the boards I use every day. So I redrew it and built a whole family: 22 open-source prototype PCBs on one 2.54 mm grid, all with the same plated holes, labels and mounting holes. This board is one of them.
+In 2019 I shared a simple 100 x 50 mm DIY universal board. I kept using it, and I kept wishing it came in more sizes and in versions made for the boards I use every day. So I redrew it and built a whole family of 24 open-source boards: proto boards on one 2.54 mm grid, dev-board carriers, shields and PCB rulers, all with the same quality and clear labels. This board is one of them.
 
 ### What's on the board
 - Mega 2560 R3 outline and the 6 Mega mounting holes
@@ -48,7 +48,7 @@ In 2019 I shared a simple 100 x 50 mm DIY universal board. I kept using it, and 
 - 101.6 mm is just over 100 mm, so some price tiers cost a little more
 
 ### Part of the DIY Universal Boards family
-22 open-source proto boards on one grid: dot-grid boards, stripboard, breadboard layouts, carriers for Pico / ESP32 / ESP8266 / Nano / D1 mini / C3 SuperMini / Blue Pill, Arduino Uno and Mega shields, a Raspberry Pi HAT-size board, an SMD adapter and PCB rulers.
+24 open-source boards: dot-grid boards, stripboard, breadboard layouts, carriers for Pico / ESP32 / ESP8266 / Nano / D1 mini / C3 SuperMini / Blue Pill, Arduino Uno and Mega shields, a Raspberry Pi HAT-size board, an SMD adapter, PCB rulers and LED chaser rulers.
 All Gerbers and docs: https://github.com/ElectroIoT/DIY-Universal-Boards
 
 Made by ElectroIoT.in - https://electroiot.in
