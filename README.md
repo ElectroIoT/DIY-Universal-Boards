@@ -32,6 +32,8 @@ Ready-to-order Gerber files are in [`gerber/`](gerber/). Project story, per-boar
 | [PCB Ruler 15 cm](#pcb-rulers-10-cm-and-15-cm) | 160 × 32 mm | mm + inch scales both sides, drill + AWG gauges, pin pitches, trace widths, 21 SMD footprints | [zip](gerber/Gerber_PCB-Ruler-15cm.zip) |
 | [LED Chaser Ruler 10 cm](#led-chaser-pcb-rulers-10-cm-and-15-cm) | 120 × 34 mm | Ruler with a 555 + 4017 rainbow LED chaser, LED at every cm, all parts on top | [zip](gerber/Gerber_LED-Chaser-Ruler-10cm.zip) |
 | [LED Chaser Ruler 15 cm](#led-chaser-pcb-rulers-10-cm-and-15-cm) | 170 × 34 mm | Same circuit, LED every 1.5 cm, all parts on top | [zip](gerber/Gerber_LED-Chaser-Ruler-15cm.zip) |
+| [Power Proto Board](#power-proto-board-and-mini-power-module) | 100 × 50 mm | Built-in 5 V + 3.3 V supply (DC jack / USB-C), power rails, dot grid | [zip](gerber/Gerber_Power-Proto-100x50.zip) |
+| [Mini Power Module](#power-proto-board-and-mini-power-module) | 55 × 35 mm | DC jack / USB-C in, 5 V + 3.3 V out on a 2.54 mm header | [zip](gerber/Gerber_Mini-Power-Module.zip) |
 
 The images below show the top and bottom silkscreen drawn over each other. On the real board they're on opposite sides. Blue lines are bottom-layer copper and red is top-layer copper.
 
@@ -238,6 +240,21 @@ A working circuit on a ruler. A TLC555 clock drives a 74HC4017 counter, and a **
 ![Schematic](docs/led-chaser-ruler-schematic.png)
 
 The full schematic, netlist, parts list with **LCSC part numbers**, and assembly steps are in [docs/led-chaser-ruler.md](docs/led-chaser-ruler.md). Ready-made **BOM and pick-and-place files for PCB assembly** are in [`assembly/`](assembly/). Both boards pass EasyEDA's design rule check with 0 errors, but they **haven't been built and tested yet**.
+
+### Power Proto Board and Mini Power Module
+
+![Power Proto Board](images/Power-Proto-100x50.png)
+
+![Mini Power Module](images/Mini-Power-Module.png)
+
+Both boards have the same **built-in power supply**: a DC jack (7–12 V, with reverse-polarity protection) or USB-C (5 V, with a PTC fuse) in, **5 V from an L7805** and **3.3 V from an AMS1117** out, with an ON/OFF switch and power LEDs.
+
+- **Power Proto Board (100 × 50 mm):** a +5 V / GND rail on top, a +3.3 V / GND rail on the bottom, and a dot grid. A whole project on one board.
+- **Mini Power Module (55 × 35 mm):** outputs on a 1 × 8 2.54 mm header (VIN, GND, 5V, 5V, GND, 3V3, 3V3, GND), so it plugs into a breadboard or any proto board.
+
+![Power supply schematic](docs/power-supply-schematic.png)
+
+The schematic, how it works, limits (7805 heat), the parts list with **LCSC part numbers** and assembly tips are in [docs/power-boards.md](docs/power-boards.md). BOM and pick-and-place files are in [`assembly/`](assembly/). Both boards pass EasyEDA's design rule check with 0 errors, but they **haven't been built and tested yet**.
 
 ## Ordering
 

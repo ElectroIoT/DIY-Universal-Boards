@@ -12,7 +12,7 @@ arduino nano, proto board, atmega328
 ## Description (paste into the project description)
 
 ### Why I made this
-In 2019 I shared a simple 100 x 50 mm DIY universal board. I kept using it, and I kept wishing it came in more sizes and in versions made for the boards I use every day. So I redrew it and built a whole family of 24 open-source boards: proto boards on one 2.54 mm grid, dev-board carriers, shields and PCB rulers, all with the same quality and clear labels. This board is one of them.
+In 2019 I shared a simple 100 x 50 mm DIY universal board. I kept using it, and I kept wishing it came in more sizes and in versions made for the boards I use every day. So I redrew it and built a whole family of 26 open-source boards: proto boards on one 2.54 mm grid, dev-board carriers, shields and PCB rulers, all with the same quality and clear labels. This board is one of them.
 
 ### What's on the board
 - Socket rows for the Arduino Nano (2 x 15 pins, 0.6" apart), USB end on the left
@@ -46,7 +46,7 @@ In 2019 I shared a simple 100 x 50 mm DIY universal board. I kept using it, and 
 - Use female headers so the Nano can be swapped
 
 ### Part of the DIY Universal Boards family
-24 open-source boards: dot-grid boards, stripboard, breadboard layouts, carriers for Pico / ESP32 / ESP8266 / Nano / D1 mini / C3 SuperMini / Blue Pill, Arduino Uno and Mega shields, a Raspberry Pi HAT-size board, an SMD adapter, PCB rulers and LED chaser rulers.
+26 open-source boards: dot-grid boards, stripboard, breadboard layouts, carriers for Pico / ESP32 / ESP8266 / Nano / D1 mini / C3 SuperMini / Blue Pill, Arduino Uno and Mega shields, a Raspberry Pi HAT-size board, an SMD adapter, PCB rulers, LED chaser rulers and power-supply boards.
 All Gerbers and docs: https://github.com/ElectroIoT/DIY-Universal-Boards
 
 Made by ElectroIoT.in - https://electroiot.in

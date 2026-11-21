@@ -2,11 +2,11 @@
 
 ## One line
 
-**24 open-source PCBs, one family:** dot-grid boards, stripboard, breadboard-layout boards, carriers for the dev boards makers use every day, Arduino and Raspberry Pi proto shields, an SMD adapter and two PCB rulers. They're free to download, change and order.
+**26 open-source PCBs, one family:** dot-grid boards, stripboard, breadboard-layout boards, carriers for the dev boards makers use every day, Arduino and Raspberry Pi proto shields, an SMD adapter and two PCB rulers. They're free to download, change and order.
 
 ## The short pitch (paste anywhere, ~80 words)
 
-> In 2019 I shared a simple 100 × 50 mm DIY universal board. It was a plain board, but I kept reaching for it. I also kept wishing it came in other sizes, with power rails, as a breadboard copy, and in versions that fit my Pico, ESP32 and Nano. So I redrew it and built a complete family of 24 boards, with the same quality and specs everywhere. Every board is open source (CC BY-SA 4.0), with ready-to-order Gerbers.
+> In 2019 I shared a simple 100 × 50 mm DIY universal board. It was a plain board, but I kept reaching for it. I also kept wishing it came in other sizes, with power rails, as a breadboard copy, and in versions that fit my Pico, ESP32 and Nano. So I redrew it and built a complete family of 26 boards, with the same quality and specs everywhere. Every board is open source (CC BY-SA 4.0), with ready-to-order Gerbers.
 
 ## Why I made this
 
@@ -38,7 +38,7 @@ I wanted boards that sit in the middle: as quick as perfboard, as solid as a rea
 | Copper-linked layouts | Stripboard, Power Rail Proto, Breadboard PCB, Mini Breadboard |
 | Dev-board carriers | Raspberry Pi Pico, ESP32 DevKit 38-pin, NodeMCU ESP8266, Arduino Nano, Wemos D1 mini, ESP32-C3 SuperMini, STM32 Blue Pill |
 | Shields and HATs | Arduino Uno shield, Arduino Mega shield, Raspberry Pi HAT-size proto |
-| Specials | SMD adapter (SOIC / SOT-23 / 0805 / 1206), PCB rulers 10 cm and 15 cm, LED chaser rulers 10 cm and 15 cm |
+| Specials | SMD adapter (SOIC / SOT-23 / 0805 / 1206), PCB rulers 10 cm and 15 cm, LED chaser rulers 10 cm and 15 cm, Power Proto Board and Mini Power Module |
 
 ## How it scores on design, usability, creativity and content
 
@@ -66,7 +66,7 @@ I wanted boards that sit in the middle: as quick as perfboard, as solid as a rea
 
 1. *(Breadboard with a working circuit)* "It works on the breadboard. Now what?"
 2. *(Cheap perfboard, pad lifting)* "Cheap perfboard falls apart. A custom PCB takes two weeks."
-3. *(Fan out the boards)* "So I made DIY Universal Boards: 24 open-source PCBs."
+3. *(Fan out the boards)* "So I made DIY Universal Boards: 26 open-source PCBs."
 4. *(Breadboard PCB beside the breadboard)* "Copy your breadboard hole for hole…"
 5. *(Pico / ESP32 carrier)* "…drop in your Pico, ESP32 or Nano, with every pin labelled…"
 6. *(Ruler on the bench)* "…and measure it all with the PCB ruler."
